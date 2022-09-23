@@ -15,8 +15,8 @@
 #     print(((2*k)-1), end=' ')
 
 print("Printing Odd Number from First 100 Naturals Numbers while using loop")
-i=1
-while i <= 100:
+i=100
+while i >= 1:
     if i%2!=0:
         print(i, end=' ')
-    i=i+1
+    i=i-1
