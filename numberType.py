@@ -1,33 +1,61 @@
-# # print("odd number")
-# #
-# # for i in range (0, 101):
-# #     if i%2 != 0:
-# #         print(i, end=' ')
-#
-# print("even number")
-#
-# for i in range (0,101):
-#     if i%2 ==0:
-#         print(i, end=' ')
+"""
+Programmer: Carlos Suarez
+Program : Numbers Type
+Python 3.7.9
+First Writen : 9-26-2022, 8:46:00 AM
+Last Updated : 9-30-2022, 8:16:00 AM
+"""
+
+print("Welcome to Mathematical Operations")
+print("1-Odd Numbers \n 2-Even Numbers \n 3-Prime Numbers \n 4-Perfect Numbers \n 5-Palindrome Numbers")
+
+choice = int(input("Choose the operation: "))
+
+if choice == 1:
+        print("Odd Numbers")
+        for i in range(0, 101):
+            if i % 2 != 0:
+                print(i, end=' ')
+
+elif choice == 2:
+    print("Even nNumber")
+    for i in range(0, 101):
+        if i % 2 == 0:
+            print(i, end=' ')
+
+elif choice == 3:
+    print("Prime Numbers")
+    counter = 0
+    for n in range(1,101):
+        for i in range(2,int(n/2+1)):
+            if n % i == 0:
+                counter=counter+1
+        if counter==0:
+            print(n, end=' ')
+        counter = 0
+
+elif choice == 4:
+    print("Perfect Numbers")
+    for i in range(1, 51):
+        sum = 0
+        for n in range(1, i):
+            if i % n==0:
+                sum = sum + n
+        if sum == i:
+            print(i, end=' ')
+
+elif choice == 5:
+    print("Palindrome Numbers")
+    number=int(input("Please Enter your number: "))
+    reverse=0
+    originalNumber=number
+    while number > 0:
+        remainder=int(number%10)
+        reverse=int(reverse*10+remainder)
+        number=int(number/10)
+    if originalNumber==reverse:
+        print(originalNumber, "is a Palindrome Number")
+    else:
+        print(originalNumber, "is not a Palindrome Number")
 
 
-# print("Prime Numbers")
-# counter=0 #intializing counter variale to 0
-# for n in range(1,101): #iterating for number between 2 and n/2+1
-#     for i in range(2,int(n/2+1)): #checking number of diviors for a number
-#         if n%i==0: #check for remainder is 0
-#             counter=counter+1 #increase the counter if you find a divisor
-#     if counter==0: #decision to see if counter is 0 i.e no divisors
-#         print(n, end=' ') #printing if the number is prime
-#     counter=0
-#
-print("Perfect Numbers from First 100 Natural Numbers")
-check = 0
-sum = 0
-n = 6
-for i in range(1, int(n / 2) + 1):
-    check = n % i
-    if check == 0:
-        sum = sum + i
-if sum == n:
-    print(n, end=' ')
