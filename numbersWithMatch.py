@@ -25,24 +25,25 @@ match choice:
             print(i, end=' ')
 
  case 3:
-        print("Prime Numbers")
+    print("Prime Numbers")
+    counter = 0
+    for n in range(1,101):
+        for i in range(2,int(n/2+1)):
+            if n % i == 0:
+                counter=counter+1
+            if counter==0:
+                print(n, end=' ')
             counter = 0
-            for n in range(1,101):
-                for i in range(2,int(n/2+1)):
-                    if n % i == 0:
-                        counter=counter+1
-                if counter==0:
-                    print(n, end=' ')
-                counter = 0
+
  case 4:
-        print("Perfect Numbers")
-            for i in range(1, 51):
-                sum = 0
-                for n in range(1, i):
-                    if i % n==0:
-                    sum = sum + n
-                if sum == i:
-                    print(i, end=' ')
+    print("Perfect Numbers")
+    for i in range(1, 51):
+        sum = 0
+        for n in range(1, i):
+            if i % n==0:
+                sum = sum + n
+            if sum == i:
+                print(i, end=' ')
 
  case 5:
     print("Palindrome Numbers")
@@ -57,5 +58,3 @@ match choice:
         print(originalNumber, "is a Palindrome Number")
     else:
         print(originalNumber, "is not a Palindrome Number")
-
-
