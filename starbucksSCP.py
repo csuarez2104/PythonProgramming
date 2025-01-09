@@ -79,5 +79,7 @@ def choice():
             return total
         payment()
         break
+
+
 display()
 choice()
